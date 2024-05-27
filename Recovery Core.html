@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>RECOVERY.CORE</title>
+<style>
+.box
+{
+position:relative;
+width:50%;
+height:50%;
+background-color:pink;
+margin:150px 350px;
+border-radius:20px;
+}
+input
+{
+position:absolute;
+width:30%;
+height:80%;
+background-color:white;
+margin:30px 20px;
+}
+.show
+{
+position:absolute;
+width:60%;
+height:80%;
+background-color:white;
+margin:30px 235px;
+}
+.heart-shape:before{
+	color: green;
+	content: "❤";
+	font-size: 3.8em;
+	position: absolute;
+	bottom: 86%;
+	left:29.5%;
+	cursor:pointer;
+}
+
+</style>
+</head>
+<body>
+<div class="box">
+<div class="heart-shape"> </div>
+<input id="myText" placeholder="Enter Text">
+<div class="show">
+<h3 id="myH3">Don<span style="color:pink;">ate a Pr</span>ayer:</h3>
+</div>
+<button style="cursor:pointer; border-radius:60%; position:absolute; margin:295px 430px;"><b>+</button>
+<button id="mySubmit" style="cursor:pointer;  position:absolute; margin:295px 90px;">Submit</button>
+</div>
+
+
+
+<script>
+let input;
+document.getElementById("mySubmit").onclick= function()
+{
+	input=document.getElementById("myText").value;
+	document.getElementById("myH3").textContent=` Dear God; ${input}` 
+}
+</script>
+</body>
+</html>
